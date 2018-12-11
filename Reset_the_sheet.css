@@ -1,0 +1,14 @@
+
+/* These are the styles to reset the page to redefine the defult browser */
+/* Below i will work in the styles that will replace the default ones  */
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* This should be good for now for the reset page */

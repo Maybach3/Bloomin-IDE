@@ -1,0 +1,438 @@
+/* I am going to attempt to add all the styles needed for the softwae page
+right here including the media queris to take in count the screen size of
+the veiwing device. */
+@charset "UTF-8";
+/* --Main Styles-- */
+/* I will make variables for the color scheme. I have figured out how to
+through the book as well as an online video. These variables will be the
+same as the one on the main page although i may add some to have variation
+throughout the site*/
+:root{
+  /* Main page variables */
+  --primary: #001644;
+  --second: #003554;
+  --third: #006494;
+  --fourth: #0582CA;
+  --fith: #001e5e;
+  --ExtraOne: #002744;
+  --ExtraTwo: #000544;
+  --Complement: #164400;
+  --text: #A7D9F2;
+  --textTwo: #96d2ef;
+  /* Extra vars/colors spicific to the software page */
+  --MainBackground: #004d99;
+  --StandOutColor: #3399ff;
+  --raceTrack: #101010;
+  --TheCar: #9e1030;
+}
+/* html and body styles that will not change */
+html{
+  box-sizing: border-box;
+  width: 100%;
+  font-family: 'Bitter', serif;
+  font-family: 'Kumar One Outline', cursive;
+  font-size: 14px;
+}
+body{
+  display: block;
+  color: var(--textTwo);
+  background: var(--MainBackground);
+  line-height: 1.4;
+  width: 100%;
+}
+#mainPageLink a{
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+
+}
+/* For this style sheet i will be doing mobile first */
+@media only screen and (max-width: 767px){
+  /* First we want to hide all other content but phone content */
+  #MainDesktopLayout, #TabletDeviceSetup{
+    display: none;
+  }
+  #PhoneSetup{
+    display: block;
+    position: absolute;
+    width: 100%;
+    font-size: 1.1em;
+    align-content: center;
+    color: inherit;
+    left: 0.5rem;
+  }
+  /* header styles */
+  #PhoneSetup header{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    margin: 1.5rem 0 1.5rem 0.4rem;
+    padding: 1rem 0 1rem 0;
+    background: var(--third);
+    right: 0.5rem;
+  }
+  #PhoneSetup header h1{
+    font-size: 1.8em;
+    font-variant: small-caps;
+    padding: 1rem 0 1rem 0;
+    margin: 2rem 0 2rem 0;
+    text-decoration: underline;
+    position: relative;
+    text-align: center;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+  }
+  #PhoneSetup header p{
+    font-size: 1.6em;
+    text-align: center;
+  }
+  /* Table styles for mobile */
+  #PhoneSetup #PlacementTable{
+    background: var(--primary);
+    border: 2rem outset var(--second);
+    font-size: 1.2em;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+  }
+  #PlacementTable th{
+    font-size: 1.4em;
+    border: 1rem double var(--text);
+    width: 100%;
+  }
+  #PlacementTable td{
+    border: 0.5rem solid var(--fourth);
+    background: var(--StandOutColor);
+    color: white;
+    text-align: center;
+    width: 100%;
+  }
+  /* figure for the phones and then the footer */
+  #PhoneSetup figure{
+    margin-top: 1rem;
+  }
+  #PhoneSetup figure img{
+    width: 120%;
+    position: relative;
+    right: 2%;
+  }
+  #PhoneSetup figure figcaption{
+    box-sizing: border-box;
+    border: 1rem double var(--text);
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    right: 0.5rem;
+  }
+  /* Now for the footer */
+  #PhoneSetup footer{
+    background: var(--third);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 3rem;
+    right: 0.5rem;
+  }
+  #PhoneSetup #mainPageLink a{
+    font-size: 1.2em;
+    text-decoration: underline;
+    margin-top: 0.5rem;
+  }
+
+}
+/* Now i will set up the styles for tablet screens */
+@media screen and (min-width: 768px) and (max-width: 991px){
+  #PhoneSetup, #MainDesktopLayout{
+    display: none;
+  }
+  #TabletDeviceSetup{
+    display: block;
+    position: absolute;
+    width: 100%;
+    font-size: 1.3em;
+    align-content: center;
+    color: inherit;
+
+  }
+  /* Tablet header styles */
+  #TabletDeviceSetup header{
+    background: var(--third);
+    position: relative;
+    box-sizing: border-box;
+    width: 90%;
+    height: 25%;
+    margin: 0, 0, 3rem, 0;
+    left: 5%;
+    right: 5%;
+  }
+  #TabletDeviceSetup header h1{
+    font-size: 1.9em;
+    color: black;
+    font-variant: small-caps;
+    text-decoration: underline;
+    position: relative;
+    text-align: center;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+  #TabletDeviceSetup header p{
+    font-size: 1.7em;
+    text-align: center;
+  }
+  /* Tablet table styles */
+  .TabletComp_software_tbl table{
+    width: 100%;
+    position: relative;
+    box-sizing: content-box;
+    border: 1.5rem double var(--text);
+    background: var(--primary);
+    text-align: center;
+    height: 120rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #TabletDeviceSetup .TabletComp_software_tbl th#StandsOut{
+    background: var(--StandOutColor);
+    color: var(--text);
+    box-sizing: content-box;
+    position: relative;
+    font-size: 1.7em;
+    border: 1rem double var(--second);
+    height: 3rem;
+  }
+  #TabletDeviceSetup .TabletComp_software_tbl th#StandsOut:first-of-type{
+    vertical-align: middle;
+  }
+  #TabletDeviceSetup .TabletComp_software_tbl th{
+    background: var(--ExtraOne);
+    vertical-align: middle;
+    font-size: 1.5em;
+    position: relative;
+    width: 48%;
+    border: 1rem outset var(--Complement);
+  }
+  #TabletDeviceSetup .TabletComp_software_tbl td{
+    background: var(--ExtraTwo);
+    vertical-align: middle;
+    font-size: 1.4em;
+    position: relative;
+    width: 48%;
+    border: 1rem solid var(--fourth);
+  }
+  .TabletComp_software_tbl th#lastHeader{
+    background: var(--StandOutColor);
+    color: black;
+    box-sizing: content-box;
+    position: relative;
+    font-size: 1.8em;
+    border: 1rem double var(--second);
+    height: 6%;
+  }
+  /* Tablet aside and footer sections */
+  #TabletDeviceSetup figure{
+    display: inline-flex;
+    flex-flow: column nowrap;
+    flex: 0 1 24rem;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60%;
+    background: var(--primary);
+
+    justify-content: center;
+  }
+  #TabletDeviceSetup figure img{
+    width: 100%;
+    height: 30rem;
+  }
+  #TabletDeviceSetup figure figcaption{
+    position: relative;
+    height: 15%;
+    color: inherit;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #TabletDeviceSetup figure figcaption:first-of-type{
+    font-size: 1.7em;
+    background: var(--ExtraOne);
+    border: 3rem double var(-fourth)
+  }
+  #TabletDeviceSetup figure figcaption:first-of-type:hover{
+    background: var(--ExtraTwo);
+    border: 4rem double var(--Complement);
+  }
+  #TabletDeviceSetup figure figcaption:last-of-type{
+    font-size: 1.9;
+    font-weight: bold;
+    font-variant: small-caps;
+    background: var(ExtraTwo);
+    border: 3rem double var(--Complement);
+  }
+  #TabletDeviceSetup figure figcaption:last-of-type:hover{
+    background: var(--ExtraOne);
+    border: 4rem double var(--fourth);
+  }
+  #TabletDeviceSetup footer{
+    position: relative;
+    box-sizing: border-box;
+    background: var(--third);
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #TabletDeviceSetup #MainPageLink a{
+    font-size: 1.5rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #PhoneSetup, #TabletDeviceSetup{
+    display: none;
+  }
+  #MainDesktopLayout{
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 1.6em;
+    align-content: center;
+    color: inherit;
+  }
+  /* Desktop header styles */
+  #MainDesktopLayout header{
+    display: block;
+    background: var(--third);
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40%;
+    text-align: center;
+  }
+  #MainDesktopLayout header h1{
+    display: block;
+    color: var(--Track);
+    text-decoration: underline;
+    font-variant: small-caps;
+    font-size: 2.2em;
+    border: 3rem double var(--primary);
+    margin-bottom: 3rem;
+  }
+  #MainDesktopLayout header p{
+    display: block;
+    color: inherit;
+    font-size: 1.8em;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  /* Desktop table styles */
+  .SoftwarePackageTable{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 120%;
+    margin-top: 4rem;
+    color: inherit;
+    background: var(--second);
+  }
+  .SoftwarePackageTable h2{
+    font-size: 1.9em;
+    text-decoration: underline;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+    color: var(--StandOutColor);
+    text-shadow: var(--fith) 1.5rem 0.3rem 1rem;
+  }
+  .SoftwarePackageTable table{
+    width: 98%;
+    margin-right: 1%;
+    margin-left: 1%;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+    border: 4rem double var(--text);
+    background: var(--primary);
+  }
+  .SoftwarePackageTable th#SingleSetSoftware{
+    position: relative;
+    box-sizing: border-box;
+    font-size: 1.8em;
+    width: 50%;
+    text-decoration: underline;
+    border: 2rem solid var(--fourth);
+  }
+  .SoftwarePackageTable th#Package{
+    position: relative;
+    box-sizing: border-box;
+    font-size: 1.8em;
+    width: 50%;
+    text-decoration: underline;
+    border: 2rem solid var(--fourth);
+  }
+  .SoftwarePackageTable .SoftwareSideLeft{
+    position: relative;
+    width: 50%;
+  }
+  .SoftwarePackageTable .PackegeSideRight{
+    position: relative;
+    width: 50%;
+  }
+  .SoftwarePackageTable th, .SoftwarePackageTable tr{
+    position: relative;
+    width: 25%;
+    text-align: center;
+  }
+  .SoftwarePackageTable th.SoftwareSideLeft{
+    background: var(--second);
+    color: var(--text);
+    font-size: 1.7em;
+    border: 3rem outset darkblue;
+  }
+  .SoftwarePackageTable td.SoftwareSideLeft{
+    background: var(--ExtraOne);
+    color: inherit;
+    font-size: 1.6em;
+    border: 2rem solid var(--Complement);
+  }
+  .SoftwarePackageTable th.PackegeSideRight{
+    background: var(--fourth);
+    color: var(--text);
+    font-size: 1.7em;
+    border: 3rem outset var(--StandOutColor);
+  }
+  .SoftwarePackageTable td.PackegeSideRight{
+    background: var(--ExtraTwo);
+    color: inherit;
+    font-size: 1.6em;
+    border: 3rem solid var(--MainBackground);
+  }
+  .SoftwarePackageTable tr:last-of-type th{
+    font-size: 1.8em;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    height: 10rem;
+    width: 100%;
+    text-decoration: underline;
+  }
+  /* Footer styles */
+  #MainDesktopLayout footer{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    align-content: center;
+    height: 8rem;
+    text-align: center;
+
+  }
+  #MainDesktopLayout footer a{
+    font-size: 1.6em;
+    color: var(--text);
+    text-decoration: none;
+  }
+}

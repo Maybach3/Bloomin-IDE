@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* Main page variables */
+:root{
+  /* Main page variables */
+  --primary: #001644;
+  --second: #003554;
+  --third: #006494;
+  --fourth: #0582CA;
+  --fith: #001e5e;
+  --ExtraOne: #002744;
+  --ExtraTwo: #000544;
+  --Complement: #164400;
+  --text: #A7D9F2;
+  --textTwo: #96d2ef;
+}
+html{
+
+  font-family: 'Bitter', sans-serif;
+  color: var(--text);
+}
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--primary);
+}
+.contactTitle h1{
+  font-size: 2em;
+  letter-spacing: 3px;
+  
+}

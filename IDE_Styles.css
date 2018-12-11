@@ -1,0 +1,851 @@
+/* I am going to attempt to add all the styles needed for the main page
+right here including the media queris to take in count the screen size of
+the veiwing device. */
+/* @charset "UTF-8"; */
+@charset "UTF-8";
+/* --Main Styles-- */
+/* I will make variables for the color scheme. I have figured out how to
+through the book as well as an online video */
+:root{
+  --primary: #001644;
+  --second: #003554;
+  --third: #006494;
+  --fourth: #0582CA;
+  --fith: #001e5e;
+  --ExtraOne: #002744;
+  --ExtraTwo: #000544;
+  --Complement: #164400;
+  --text: #A7D9F2;
+  --textTwo: #96d2ef;
+
+}
+@media screen and (min-width: 992px) {
+
+
+html{
+  box-sizing: border-box;
+  width: 100%;
+  font-family: 'Bitter', serif;
+  font-family: 'Kumar One Outline', cursive;
+  font-size: 16px;
+
+}
+
+body{
+  display: block;
+  color: var(--text);
+  background: #00527A;
+  margin: 0px 0px 30px 0px;
+  line-height: 1.4;
+}
+
+.wrapper{
+  display: grid;
+
+}
+
+img{
+  max-width: 100%;
+}
+p{
+  font-size: 1.2em;
+}
+/* header grid */
+div#Header-divgrid
+{
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+
+
+}
+.Title{
+  display: block;
+  background: var(--primary);
+  box-sizing: border-box;
+  padding: 50px 0px 50px 0px;
+  margin-bottom: 2%;
+  margin-top: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 2.2em;
+  text-shadow: var(--second) 25px 3px 3px;
+  font-variant: small-caps;
+
+  /*
+  position: fixed;
+  top: 0px;
+  */
+
+  /* I will create a transition to make the title move with the scroll
+  but also make itself smaller hieght wise to make it easily accessable.
+  This will not be the same for phone screen size */
+}
+.next{
+  background: var(--second);
+  box-sizing: border-box;
+  padding: 30px 0px 30px 0px;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  text-indent: inherit;
+}
+
+
+
+
+
+/* nav list style */
+#directory-divgrid ul{
+  display: grid;
+  grid-gap: 25px;
+  padding: 0;
+  list-style: none;
+  padding-left: 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+.mainLocator a{
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 0.8rem;
+  border: 0;
+  text-transform: uppercase;
+}
+.mainLocator li:first-of-type a, .mainLocator li:nth-of-type(3) a{
+  color: var(--text);
+}
+.mainLocator li:first-of-type, .mainLocator li:nth-of-type(3){
+  background: var(--ExtraOne);
+
+  text-shadow: var(--ExtraTwo) 20px 3px 5px;
+}
+.mainLocator li:first-of-type:hover a, .mainLocator li:nth-of-type(3):hover a{
+  color: var(--fourth);
+}
+.mainLocator li:first-of-type:hover, .mainLocator li:nth-of-type(3):hover{
+  background: var(--ExtraTwo);
+
+  text-shadow: var(--ExtraOne) 20px 3px 5px;
+}
+.mainLocator li:nth-of-type(2) a{
+  color: var(--text);
+}
+.mainLocator li:nth-of-type(2){
+  background: var(--second);
+  text-shadow: var(--third) 20px 3px 5px;
+  /* Now i want to make the middle a element stand out more */
+  position:relative;
+  box-sizing: border-box;
+  font-size: 1.6em;
+  transition-property: background, transform;
+  transition-duration: 1s, 4s;
+  transition-delay: 0s, 5s;
+  transition-timing-function: ease-in;
+
+}
+
+.mainLocator li:nth-of-type(2):hover a{
+  color: var(--fourth)
+}
+.mainLocator li:nth-of-type(2):hover{
+  background: var(--Complement);
+  text-shadow: var(--second) 15px 2px 6px;
+  /* Now  set up transitions for the middle object*/
+  transform: rotateY(360deg);
+}
+
+/* container one stuff */
+.containerOne {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  background: var(--third);
+  grid-template-rows: 2;
+  grid-row-gap: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 110rem;
+}
+.jumbotron{
+  vertical-align: middle;
+  align-items: center;
+  width: 100%;
+}
+.containerOne h2{
+  font-size: 2.5em;
+  font-weight: bold;
+  padding: 5rem auto 5rem auto;
+}
+
+.jumbotron p{
+  font-size: 1.9em;
+  font-variant: small-caps;
+  display: block;
+  background: var(--primary);
+  padding: 10% 15% 10% 15%;
+}
+.jumbotron img{
+  padding: 1px;
+  border: 1px double black;
+  background-color: var(--text);
+  width: 33%;
+
+}
+.jumbotron::after{
+  content: " ";
+  clear: both;
+  display: table;
+}
+/* Float the objects so that they both are next to eachother */
+.Servers{
+  float:left;
+}
+.Platform{
+  float: left;
+}
+.Micro{
+  float: left;
+}
+.Optics{
+  clear: left;
+  float: left;
+}
+.Lit{
+  float: left;
+}
+.Keyboard{
+  float: left;
+}
+/* Secound container and drop downboxes */
+.containerTwo{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0px;
+  text-align: center;
+  background: var(--fith);
+  width: 100%;
+  height: 60rem;
+}
+#first-box, #secound-box, #Third-box, #fourth-box{
+  display: block;
+  position: relative;
+  align-content: center;
+}
+.containerTwo div:nth-of-type(4), .containerTwo div:first-of-type{
+  border: 1.5rem solid var(--fourth);
+  background: inherit;
+}
+.containerTwo div:nth-of-type(3), .containerTwo div:nth-of-type(2){
+  border: 1.5rem solid var(--primary);
+  background: inherit;
+}
+/* Align all content in each box vertically within the container */
+.boxOneContents, .boxTwoContents, .boxThreeContents, .boxFourContents{
+  margin: 0;
+  position: relative;
+  top: 25%;
+}
+
+.containerTwo i{
+  padding-bottom: 2%;
+}
+/* This is a placeholder to test things with the container and svg icons to make
+the paragraphs within the container to be droped down through the icon. I will also
+use transitions to make this happen*/
+.containerTwo p{
+  display: none;
+}
+
+/* Finall quote and footer styles  */
+.extra-banner{
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 1.5rem 0 1rem 0;
+  width: 100%;
+  text-align: center;
+  background: var(--ExtraTwo);
+}
+.extra-banner blockquote{
+  position: relative;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 4px double var(--fourth);
+}
+.extra-banner blockquote p{
+  font-size: 1.8em;
+  text-overflow: ellipsis;
+  color: var(--text);
+  font-variant: small-caps;
+}
+/* Footer styles */
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 0rem 0;
+  padding: 2rem 0 2rem 0;
+  background: var(--ExtraOne);
+  color: var(--text);
+}
+#name{
+  font-size: 1.6em;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+#topLink{
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet Screen Size (greater than or equal to 768px) */
+@media screen and (min-width: 768px) and (max-width: 991px){
+  html{
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Bitter', serif;
+    font-family: 'Kumar One Outline', cursive;,
+    font-size: 14px;
+
+  }
+
+  body{
+    display: block;
+    color: var(--text);
+    background: #00527A;
+    margin: 0px 0px 0px 0px;
+    line-height: 1.4;
+  }
+
+  .wrapper{
+    display: grid;
+  }
+
+  img{
+    max-width: 100%;
+  }
+  p{
+    font-size: 1.2em;
+  }
+  /* header grid */
+  div#Header-divgrid
+  {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    box-sizing: border-box;
+    height: 25%;
+  }
+  .Title{
+    display: block;
+    background: var(--primary);
+    box-sizing: border-box;
+    padding: 2rem 0px 2rem 0px;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: var(--second) 25px 3px 3px;
+    font-variant: small-caps;
+
+    /*
+    position: fixed;
+    top: 0px;
+    */
+
+    /* I will create a transition to make the title move with the scroll
+    but also make itself smaller hieght wise to make it easily accessable.
+    This will not be the same for phone screen size */
+  }
+  .next{
+    background: var(--second);
+    box-sizing: border-box;
+    padding: 30px 0px 30px 0px;
+    margin: 0 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    text-indent: inherit;
+  }
+
+
+
+
+
+  /* nav list style */
+  #directory-divgrid ul{
+    position: relative;
+    display: grid;
+    padding: 0;
+    list-style: none;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+  .mainLocator li{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem 0rem 2rem 0rem;
+    background: var(--ExtraOne);
+    border: 3px double var(--text);
+  }
+  .mainLocator li:first-of-type{
+    /* Keep first list element at the starting position */
+    position: relative;
+    right: 0;
+  }
+  .mainLocator li:nth-of-type(2){
+    /* Move the second list element to the centre of the screen */
+    position: relative;
+    padding: 1rem 0 1rem 0;
+  }
+  .mainLocator li:last-of-type{
+    position: relative;
+  }
+  .mainLocator a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.5rem;
+    color: var(--text);
+  }
+  .mainLocator li:hover{
+    background: var(--ExtraTwo);
+  }
+
+  /* container one stuff */
+  .containerOne {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background: var(--third);
+    grid-template-rows: 2;
+    grid-row-gap: 10rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 95rem;
+  }
+  .jumbotron{
+    vertical-align: middle;
+    align-items: center;
+    width: 100%;
+  }
+  .containerOne h2{
+    font-size: 1.9em;
+    font-weight: bold;
+    padding: 5rem auto 5rem auto;
+  }
+
+  .jumbotron p{
+    font-size: 1.6em;
+    font-variant: small-caps;
+    display: block;
+    background: var(--primary);
+    padding: 10% 5% 10% 5%;
+  }
+  .jumbotron img{
+    padding: 1px;
+    border: 1px double black;
+    background-color: var(--text);
+    width: 49%;
+  }
+  .jumbotron::after{
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .Servers{
+    float:left;
+  }
+  .Platform{
+    float: left;
+  }
+  .Micro{
+    clear: left;
+    float: left;
+  }
+  .Optics{
+    float: left;
+  }
+  .Lit{
+    clear: left;
+    float: left;
+  }
+  .Keyboard{
+    float: left;
+  }
+  /* Secound container and drop downboxes */
+  .containerTwo{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0;
+    text-align: center;
+    background: var(--fith);
+    width: 100%;
+    height: 65rem;
+  }
+  #first-box, #secound-box, #Third-box, #fourth-box{
+    display: block;
+    position: relative;
+    align-content: center;
+    padding-top: 3rem;
+    border: 1px solid var(--text);
+  }
+  .containerTwo i{
+    padding-bottom: 2%;
+  }
+  #first-box:hover{
+    background: darkblue;
+    color: var(--textTwo);
+  }
+  #secound-box:hover{
+    background: darkblue;
+    color: var(--textTwo);
+  }
+  #Third-box:hover{
+    background: darkblue;
+    color: var(--textTwo);
+  }
+  #fourth-box:hover{
+    background: darkblue;
+    color: var(--textTwo);
+  }
+  /* This is a placeholder to test things with the container and svg icons to make
+  the paragraphs within the container to be droped down through the icon. I will also
+  use transitions to make this happen*/
+  .containerTwo p{
+    display: none;
+  }
+
+  /* Finnal quote and footer styles  */
+  .extra-banner{
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0 1rem 0;
+    width: 100%;
+    text-align: center;
+    background: var(--ExtraTwo);
+  }
+  .extra-banner blockquote{
+    position: relative;
+    padding: 1rem 1rem 1rem 1rem;
+    border: 4px double var(--fourth);
+  }
+  .extra-banner blockquote p{
+    font-size: 1.6em;
+    text-overflow: ellipsis;
+    color: var(--text);
+    font-variant: small-caps;
+  }
+  /* Footer styles */
+  footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 0rem 0;
+    padding: 2rem 0 2rem 0;
+    background: var(--ExtraOne);
+    color: var(--text);
+  }
+  #name{
+    font-size: 1.5em;
+    font-weight: bold;
+    font-variant: small-caps;
+  }
+  #topLink{
+    font-size: 1.3em;
+    font-weight: lighter;
+  }
+  #topLink a{
+    text-decoration: underline;
+    color: var(--textTwo);
+  }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Phone Screen Size (less than 768px) */
+@media screen and (max-width: 767px){
+  html{
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Bitter', serif;
+    font-family: 'Kumar One Outline', cursive;
+    font-size: 12px;
+
+  }
+
+  body{
+    display: block;
+    color: var(--text);
+    background: #00527A;
+    margin: 0px 0px 0px 0px;
+    line-height: 1.4;
+  }
+
+  .wrapper{
+    display: grid;
+
+  }
+
+  img{
+    max-width: 100%;
+  }
+  p{
+    font-size: 1.2em;
+  }
+  /* header grid */
+  div#Header-divgrid
+  {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    box-sizing: border-box;
+    height: 270px;
+  }
+  .Title{
+    display: block;
+    background: var(--primary);
+    box-sizing: border-box;
+    padding: 2rem 0px 2rem 0px;
+    margin-bottom: 0;
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    text-shadow: var(--second) 25px 3px 3px;
+    font-variant: small-caps;
+
+    /*
+    position: fixed;
+    top: 0px;
+    */
+
+    /* I will create a transition to make the title move with the scroll
+    but also make itself smaller hieght wise to make it easily accessable.
+    This will not be the same for phone screen size */
+  }
+  .next{
+    background: var(--second);
+    box-sizing: border-box;
+    padding: 30px 0px 30px 0px;
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    text-indent: inherit;
+  }
+
+
+
+
+
+  /* nav list style */
+  #directory-divgrid ul{
+    display: grid;
+    padding: 0;
+    list-style: none;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .mainLocator li{
+    box-sizing: border-box;
+    padding: 1.5rem 0 1.5rem 0;
+    background: var(--ExtraOne);
+    border: 1px solid var(--second);
+    width: 100%;
+  }
+  .mainLocator a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 0.5rem;
+    color: var(--text);
+  }
+  .mainLocator li:hover{
+    background: darkgreen;
+  }
+
+  /* container one stuff */
+  .containerOne {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background: var(--third);
+    grid-template-rows: 2;
+    grid-row-gap: 10rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 42rem;
+  }
+  .jumbotron{
+    vertical-align: middle;
+    align-items: center;
+    width: 100%;
+  }
+  .containerOne h2{
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 5rem auto 5rem auto;
+  }
+
+  .jumbotron p{
+    font-size: 1.4em;
+    font-variant: small-caps;
+    display: block;
+    background: var(--primary);
+    padding: 10% 5% 10% 5%;
+  }
+  .jumbotron img{
+    display: none;
+  }
+
+  /* Secound container and drop downboxes */
+  .containerTwo{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0;
+    text-align: center;
+    background: var(--fith);
+    width: 100%;
+    height: 65rem;
+  }
+  #first-box, #secound-box, #Third-box, #fourth-box{
+    display: block;
+    position: relative;
+    align-content: center;
+    padding-top: 3rem;
+    border: 1px solid var(--text);
+  }
+  .containerTwo i{
+    padding-bottom: 2%;
+  }
+  #first-box:hover{
+    background: darkblue;
+  }
+  #secound-box:hover{
+    background: darkblue;
+  }
+  #Third-box:hover{
+    background: darkblue;
+  }
+  #fourth-box:hover{
+    background: darkblue;
+  }
+  /* This is a placeholder to test things with the container and svg icons to make
+  the paragraphs within the container to be droped down through the icon. I will also
+  use transitions to make this happen*/
+  .containerTwo p{
+    display: none;
+  }
+
+  /* Finnal quote and footer styles  */
+  .extra-banner{
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem 0 1rem 0;
+    width: 100%;
+    text-align: center;
+    background: var(--ExtraTwo);
+  }
+  .extra-banner blockquote{
+    position: relative;
+    padding: 1rem 1rem 1rem 1rem;
+    border: 4px double var(--fourth);
+  }
+  .extra-banner blockquote p{
+    font-size: 1.6em;
+    text-overflow: ellipsis;
+    color: var(--text);
+    font-variant: small-caps;
+  }
+  /* Footer styles */
+  footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 0rem 0;
+    padding: 2rem 0 2rem 0;
+    background: var(--ExtraOne);
+    color: var(--text);
+  }
+  #name{
+    font-size: 1.3em;
+    font-weight: bold;
+    font-variant: small-caps;
+  }
+  #topLink{
+    font-size: 1.2em;
+    font-weight: lighter;
+  }
+  #topLink a{
+    text-decoration: underline;
+    color: var(--text);
+  }
+
+
+
+
+
+
+}

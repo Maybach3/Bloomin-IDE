@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/* animation credits: https://www.youtube.com/watch?v=C8paSmVFsVE */
+html{
+  font-family: 'Bitter', sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #101010;
+}
+p{
+  position: relative;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 3em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: ShineRun 3s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: transparent;
+}
+@keyframes ShineRun {
+  0%{
+    background-position: -500%;
+  }
+  100%{
+    background-position: 500%;
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+#MainPageLink a{
+  position: relative;
+  color: #fff;
+  font-size: 1.8em;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: LinkRotation 3s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: transparent;
+}
+@keyframes LinkRotation {
+  0%{
+    background-position: 500%;
+  }
+  100%{
+    background-position: -500%;
+  }
+}
+/* Tablet Screen Size (greater than or equal to 768px) */
+@media screen and (min-width: 768px) and (max-width: 991px){
+  body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #101010;
+  }
+  p{
+    text-align: center;
+    position: relative;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 2em;
+    letter-spacing: 3px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: ShineRun 3s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: transparent;
+  }
+  @keyframes ShineRun {
+    0%{
+      background-position: -500%;
+    }
+    100%{
+      background-position: 500%;
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+  }
+  #MainPageLink a{
+    position: relative;
+    color: #fff;
+    font-size: 1.6em;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: LinkRotation 3s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: transparent;
+  }
+  @keyframes LinkRotation {
+    0%{
+      background-position: 500%;
+    }
+    100%{
+      background-position: -500%;
+    }
+  }
+}
+@media only screen and (min-width: 992px){
+  body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #101010;
+  }
+  p{
+    text-align: center;
+    position: relative;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: ShineRun 3s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: transparent;
+  }
+  @keyframes ShineRun {
+    0%{
+      background-position: -500%;
+    }
+    100%{
+      background-position: 500%;
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+  }
+  #MainPageLink a{
+    position: relative;
+    color: #fff;
+    font-size: 1.3em;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: LinkRotation 3s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: transparent;
+  }
+  @keyframes LinkRotation {
+    0%{
+      background-position: 500%;
+    }
+    100%{
+      background-position: -500%;
+    }
+  }
+}
